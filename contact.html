@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+<script>
+  function message(){
+    var email = document.getElementById('email');
+    var msg = document.getElementById('msg');
+    const success = document.getElementById('success')
+    const danger = document.getElementById('danger');
+
+    if(email.value === '' || msg.value === ''){
+      danger.style.display = 'block';
+    }
+    else{
+      setTimeout(() => {
+           email.value = '';
+           msg.value = '';
+      },2000);
+
+      success.style.display = 'block';
+    }
+    
+    setTimeout(() => {
+      danger.style.display = 'none';
+      success.style.display = 'none';
+
+    },4000);
+  }
+</script>
+</head>
+<body>
+
+<!-- -------------NAVBAR --------------->
+<div class="container">
+  <nav class="navbar navbar-expand-md">
+    <a href="" class="navbar-brand"><img class="logoimage" src="IMG_20230508_203821.jpg" alt=""></a>
+  
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#btn">
+   <span class="navbar-toggler-icon"></span>
+  </button>
+  
+  <div class="collapse navbar-collapse" id="btn">
+    <ul class="navbar-nav mt-2">
+      <li class="nav-item">
+        <a href="home.html" class="nav-link ps-4 fw-bold navcolor">HOME</a>
+      </li>
+      <li class="nav-item">
+        <a href="about us.html" class="nav-link ps-4 fw-bold navcolor">ABOUT US</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a href="" class="nav-link dropdown-toggle ps-4 fw-bold navcolor" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">SERVICES</a>
+     <ul class="dropdown-menu">
+      <li class="nav-item dropdown-item"><a href="weddingevent.html" class="nav-link navcolor">Wedding Event</a></li>
+      <li class="nav-item dropdown-item"><a href="Birthdayevent.html" class="nav-link navcolor">Birthday Event</a></li>
+      <li class="nav-item dropdown-item"><a href="coperateevent.html" class="nav-link navcolor">Cooperate Event</a></li>
+      <li class="nav-item dropdown-item"><a href="socialevent.html" class="nav-link navcolor">Social Event</a></li>
+     </ul>
+      </li>
+      <li class="nav-item">
+        <a href="gallery.html" class="nav-link ps-4 fw-bold navcolor">GALLERY</a>
+      </li>
+      <li class="nav-item">
+        <a href="contact.html" class="nav-link ps-4 fw-bold navcolor">CONTACT US</a>
+      </li>
+    </ul>
+  </div>
+  </nav>
+  </div>
+<!-- ----------Main Page --------------->
+
+<div class="container my-5" data-aos="fade-up">
+  <div class="row">
+    
+    <div class="col-md-7 col-sm-12 my-3">
+      <h2 class="text-dark">Have you any question?</h2>
+      <p class="fw-medium text-dark-emphasis">We are here for your help...</p>
+        
+      <form>
+      <div class="mt-4 name">
+        <input type="text" class="form-control " id="name" required  placeholder="Type your name here...!" >
+      </div>
+      <div class="mt-2 email">
+        <input type="email" class="form-control" id="email" required  placeholder="Type your mail here...!" >
+      </div>
+      <div class="mt-2 number">
+        <input type="text" class="form-control" id="number" required  placeholder="Type your number here...!" >
+      </div>
+      <div class="mt-2 message-box">
+        <textarea class="form-control" rows="5" id="msg" placeholder="Type your message here...!"></textarea>
+      </div>
+      <div class="mt-2">
+        <button onclick="message()" class="form-control bton text-secondary" id="send"> Send </button>
+      </div>
+      <div class="mt-4 message">
+        <div class="success" id="success">Your Message Sent Successfully!</div>
+      <div class="danger" id="danger">Feilds Can't Be Empty!</div>
+      </div></form>
+      </div>
+      <div class="col-md-5 col-sm-12 mt-4">
+        <div class="border border-2 border-secondary shadow" style="height: 420px; width: 420px; background-color: rgb(255, 255, 255);
+        border-radius: 20px;">
+        <h2 class="text-dark mt-4 ps-5">Shop Address</h2>
+        <p class="text-secondary txt mt-2 ps-5">Defence block 6 shop no 527</p>
+        <p class="text-secondary txt ps-5">Karachi</p>
+        <p class="text-secondary txt ps-5">Pakistan</p>
+
+        <h2 class="text-dark mt-4 ps-5">Shop Hours</h2>
+        <p class="text-secondary txt mt-2 ps-5">Mon-Fri 8 to 9 PM</p>
+        <p class="text-secondary txt ps-5">Sat-Sun 10-8 PM</p>
+       
+        <h2 class="text-dark mt-4 ps-5">Conatct</h2>
+        <p class="text-secondary txt mt-2 ps-5">Call: +00 111 222 3333</p>
+        <p class="text-secondary txt ps-5">Email: info@eventplanner.com</p>
+        <p class="text-secondary txt ps-5">Pakistan</p>
+        </div>
+        
+      </div>
+  </div>
+</div>
+
+<!-- map -->
+<div class="container-fluid mt-4" data-aos="fade-up">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28960.28728542867!2d67.0077329895133!3d24.8626230676951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33e6d06bea525%3A0xca5759c73e8b99ce!2sSaddar%20Karachi%2C%20Karachi%20City%2C%20Sindh%2C%20Pakistan!5e0!3m2!1sen!2s!4v1678204933249!5m2!1sen!2s"
+  class="w-100" style="height: 400px;"></iframe>
+</div>
+
+ <!-- ---------Footer----------- -->
+ <div class="container-fluid mt-5 foterclr" data-aos="fade-in" data-aos-duration="3100">
+    <div class="container">
+        <div class="row">
+        
+            <div class="col-md-3 col-sm-12">
+                <p class="text-light h2 mt-5">Address</p>
+                <p class="text7 mt-3">2nd Floor, Ghousia Plaza,<br> E-11/3 Markaz, <br> Islamabad</p>
+            </div>
+
+            <div class="col-md-3 col-sm-12">
+                <p class="text-light h2 mt-5">Links</p>
+                <p class="text7 mt-3">SMD Screen/ LED Display<br>
+                <a class="text7" href="https://linkeventapp.com">Event Management App</a><br> 
+                <a href="contact.html" class="text7">Contact Us</a></p>
+            </div>
+
+            <div class="col-md-3 col-sm-12 ">
+                <p class="text-light h2 mt-5">Contacts</p>
+                <p class="text7 mt-3">info@eventpalnner.com<br>
+                +92 3455241404</p>
+            </div>
+
+            <div class="col-md-3 col-sm-12">
+                <p class="text-light h2 mt-5">Follow Us On:</p>
+                <div class="icons mt-3">
+                    <a href="https://www.facebook.com" class="icons"><i class="bi bi-facebook icn1 p-2 h3"></i></a>
+                    <a href="https://www.instagram.com" class="icons"><i class="bi bi-instagram icn1 p-2 h3"></i></a>
+                    <a href="https://www.youtube.com" class="icons"><i class="bi bi-youtube icn1 p-2 h3"></i></a>
+                    <a href="https://www.twitter.com" class="icons"><i class="bi bi-twitter icn1 p-2 h3"></i></a>
+                    <a href="https://www.linkedin.com" class="icons"><i class="bi bi-linkedin icn1 p-2 h3"></i></a></div>
+            </div>
+        </div>
+        <hr class="clr"><br>
+        <p class="text7 text-center"> © Copyright 2021 Eventoxs - All Rights Reserved</p><br>
+    </div>
+   </div>
+
+  
+  <script src="bootstrap-5.3.0-alpha1-dist/js/bootstrap.bundle.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init({
+      offset: 300,
+      duration: 900,
+    });
+  </script>
+    
+</body>
+</html>

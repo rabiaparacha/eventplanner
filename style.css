@@ -1,0 +1,221 @@
+.logoimage{
+    height: 120px;
+    margin-left: 120px;
+}
+.dropdown-menu{
+    border: none;
+box-shadow: 5px 5px 5px 5px;
+}
+.navcolor:hover{
+color:rgb(58, 150, 151);
+}
+.text1{
+    font-size: 20px;
+}
+
+.card{
+    position: relative;
+    overflow: hidden;
+    border: none;
+}
+.card::before{
+    position: absolute;
+    content: '';
+    width: 80%;
+    height: 220%;
+    background-color:cadetblue;
+    top: -30%;
+    left: -120%;
+    z-index: 1;
+    transform: rotate(25deg);
+    transform-origin: center top ;
+    transition: 1.5s;
+    opacity: 75%;
+}
+.card:hover::before{
+    left: 45%;
+}
+.card-text{
+    width: 100%;
+    padding: 0 20px;
+    position: absolute;
+    top: -100%;
+    color: #fff;
+    left: 0;
+    z-index: 2;
+    transition: 2s;
+    
+}
+.card-text h3{
+    font-family: poppins;
+}
+.card:hover .card-text{
+    top: 100px;
+}
+.text3{
+    margin-left: 20px;
+  }
+  .text4{
+    margin-left: 15px;
+  }
+  .text5{
+    margin-top: -15px;
+  }
+  .imges{
+    border-radius: 10px;   
+  }
+.text6{
+    font-size: 25px;
+}
+.card1{
+    position: relative;
+    width: 320px;
+    height: 175px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+    padding: 30px;
+    background: #f8f8f8;
+    cursor: pointer;
+}
+.card1:hover{
+    height: 510px;
+}
+.imgbox{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-70px);
+    z-index:99;
+}
+.img1{
+    width: 100%;
+    border-radius: 10px;
+}
+.content{
+    padding: 10px 20px;
+    /* transform: translateY(-450px); */
+    opacity: 0;
+    transition: 0.3s;
+}
+.card1:hover >.content{
+    opacity: 1;
+    transform: translateY(-350px);
+}
+.elementor-animation-grow-rotate{
+    transition: 1s;
+} 
+
+.elementor-animation-grow-rotate:hover{
+  transform: scale(1.1) rotate(8deg);
+}
+.crouseltext{
+    font-size: 20px;
+    line-height: 30px;
+}
+li{
+    list-style-type: none;
+}
+.box{
+    border-radius: 150px;
+    box-shadow: 10px 10px 20px rgb(146, 145, 145);
+    transition: 1s;
+}
+.box:hover{
+    transform: scale(1.3);
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.row .column{
+    flex: 33.3%;
+    width: auto;
+    overflow: hidden;
+    padding: 0 4px;
+    height: 100%;
+}
+.row .column img{
+    margin-top: 2%;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    filter: grayscale(0) brightness(0.7);
+    border-radius: 5px;
+    transition: 0.3s linear;
+}
+.row .column img:hover{
+    filter: grayscale(0) brightness(1.1);
+}
+@media only screen and (max-width:800px){
+ .row .column{
+    flex: 50%;
+ }
+}
+@media only screen and (max-width:680px){
+    .row .column{
+       flex: 100%;
+    }
+   }
+.icons{
+    color:rgb(224, 160, 65);
+}
+.icn1:hover{
+    color: white;
+}
+.foterclr{
+    background-color: rgb(58, 58, 58);
+    height: auto;
+}
+.text7{
+    color: rgb(224, 160, 65);
+    text-decoration: none;
+}
+.clr{
+    color: white;
+}
+.form-control{
+   border: 2px solid grey;
+}
+.bton{
+    width: 180px;
+}
+.txt{
+    line-height: 10px;
+}
+.message{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.message .success{
+    color: green;
+    position: absolute;
+    animation: buttons .3s linear;
+    display: none;
+}
+.message .danger{
+    color: red;
+    position: absolute;
+    transition: .3s;
+    animation: buttons .3s linear;
+    display: none;
+}
+@keyframes buttons{
+    0%{
+        transform: scale(0.1);
+    }
+    50%{
+        transform: scale(0.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.img{
+    transition: 1s;
+}
+.img:hover{
+    transform: scale(1.3);
+}
